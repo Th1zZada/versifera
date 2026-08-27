@@ -1,0 +1,34 @@
+/* ==============================
+   RESET
+============================== */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-width: 320px;
+  min-height: 100vh;
+
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Georgia, 'Times New Roman', serif;
+
+  background: #eee0c9;
+  color: #3d2b20;
+
+  overflow-x: hidden;
+}
+
+button {
+  font-family: inherit;
+}
+html {
+  scroll-behavior: smooth;
+}

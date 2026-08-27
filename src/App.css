@@ -1,0 +1,2996 @@
+/* ==============================
+   PÁGINA INICIAL
+============================== */
+
+.home {
+  position: relative;
+
+  width: 100%;
+  min-height: 100vh;
+
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  background:
+    radial-gradient(
+      circle at 50% 45%,
+      #f5ead8 0%,
+      #eee0c9 45%,
+      #e3cfb0 100%
+    );
+
+  color: #3d2b20;
+}
+
+
+/* ==============================
+   CONTEÚDO PRINCIPAL
+============================== */
+
+.hero {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: 1000px;
+
+  padding: 2rem;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  animation: heroAppear 1.5s ease-out forwards;
+}
+
+
+/* ==============================
+   ORNAMENTO
+============================== */
+
+.ornament {
+  margin-bottom: 1.5rem;
+
+  font-size: 1.1rem;
+
+  color: #927257;
+
+  animation: ornamentAppear 2s ease-out forwards;
+}
+
+
+/* ==============================
+   TÍTULO
+============================== */
+
+.hero h1 {
+  margin: 0;
+
+  font-family:
+    Georgia,
+    'Times New Roman',
+    serif;
+
+  font-size: clamp(4.5rem, 12vw, 9rem);
+
+  font-weight: 400;
+
+  line-height: 1;
+
+  letter-spacing: -0.04em;
+
+  color: #3b291e;
+
+  text-align: center;
+
+  text-shadow:
+    1px 1px 0 rgba(255, 255, 255, 0.35);
+
+  animation:
+    titleAppear 1.8s ease-out forwards;
+}
+
+
+/* ==============================
+   DIVISOR
+============================== */
+
+.divider {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 12px;
+
+  width: min(300px, 60vw);
+
+  margin: 1.8rem 0;
+}
+
+.divider span:not(:nth-child(2)) {
+  height: 1px;
+
+  flex: 1;
+
+  background: #a88c6d;
+}
+
+.divider span:nth-child(2) {
+  font-size: 0.7rem;
+
+  color: #927257;
+}
+
+
+/* ==============================
+   SUBTÍTULO
+============================== */
+
+.subtitle {
+  margin: 0;
+
+  font-family:
+    Georgia,
+    'Times New Roman',
+    serif;
+
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+
+  line-height: 1.8;
+
+  font-style: italic;
+
+  color: #705544;
+
+  text-align: center;
+
+  animation:
+    subtitleAppear 2s ease-out 0.3s both;
+}
+
+
+/* ==============================
+   BOTÃO
+============================== */
+
+.poems-button {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 1rem;
+
+  margin-top: 2.5rem;
+
+  padding: 1rem 1.8rem;
+
+  border: 1px solid #80634d;
+
+  border-radius: 2px;
+
+  background: rgba(255, 248, 237, 0.35);
+
+  color: #4a3427;
+
+  font-family:
+    Georgia,
+    'Times New Roman',
+    serif;
+
+  font-size: 0.95rem;
+
+  cursor: pointer;
+
+  transition:
+    background 0.4s ease,
+    color 0.4s ease,
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.poems-button:hover {
+  background: #59402f;
+
+  color: #f5ead8;
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 12px 30px rgba(70, 45, 30, 0.15);
+}
+
+.arrow {
+  transition:
+    transform 0.4s ease;
+}
+
+.poems-button:hover .arrow {
+  transform: translateX(5px);
+}
+
+
+/* ==============================
+   FORMAS DECORATIVAS
+============================== */
+
+.background-shape {
+  position: absolute;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+
+  filter: blur(1px);
+
+  opacity: 0.25;
+}
+
+
+/* Forma superior esquerda */
+
+.shape-one {
+  width: 420px;
+  height: 420px;
+
+  top: -180px;
+  left: -150px;
+
+  border: 1px solid #9a795c;
+
+  animation:
+    floatOne 10s ease-in-out infinite;
+}
+
+
+/* Forma inferior direita */
+
+.shape-two {
+  width: 350px;
+  height: 350px;
+
+  right: -130px;
+  bottom: -150px;
+
+  border: 1px solid #9a795c;
+
+  animation:
+    floatTwo 12s ease-in-out infinite;
+}
+
+
+/* ==============================
+   INDICADOR DE SCROLL
+============================== */
+
+.scroll-indicator {
+  position: absolute;
+
+  bottom: 2rem;
+
+  z-index: 3;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 0.6rem;
+
+  color: #856b53;
+
+  font-size: 0.7rem;
+
+  letter-spacing: 0.15em;
+
+  text-transform: lowercase;
+
+  text-align: center;
+
+  animation:
+    scrollAppear 2s ease-out 1s both;
+}
+
+.scroll-line {
+  width: 1px;
+
+  height: 35px;
+
+  background: #9b7c60;
+
+  animation:
+    scrollLine 2s ease-in-out infinite;
+}
+
+
+/* ==============================
+   ANIMAÇÕES
+============================== */
+
+@keyframes heroAppear {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+@keyframes titleAppear {
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(25px);
+
+    letter-spacing: 0.08em;
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0);
+
+    letter-spacing: -0.04em;
+  }
+}
+
+
+@keyframes subtitleAppear {
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
+}
+
+
+@keyframes ornamentAppear {
+  from {
+    opacity: 0;
+
+    transform:
+      rotate(-30deg)
+      scale(0.7);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      rotate(0)
+      scale(1);
+  }
+}
+
+
+@keyframes scrollAppear {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+@keyframes scrollLine {
+  0%,
+  100% {
+    opacity: 0.4;
+
+    transform:
+      scaleY(0.7);
+
+    transform-origin: top;
+  }
+
+  50% {
+    opacity: 1;
+
+    transform:
+      scaleY(1);
+
+    transform-origin: top;
+  }
+}
+
+
+@keyframes floatOne {
+  0%,
+  100% {
+    transform:
+      translate(0, 0)
+      rotate(0deg);
+  }
+
+  50% {
+    transform:
+      translate(20px, 25px)
+      rotate(8deg);
+  }
+}
+
+
+@keyframes floatTwo {
+  0%,
+  100% {
+    transform:
+      translate(0, 0);
+  }
+
+  50% {
+    transform:
+      translate(-25px, -20px);
+  }
+}
+
+
+/* ==============================
+   RESPONSIVO
+============================== */
+
+@media (max-width: 600px) {
+
+  .hero {
+    padding: 1.5rem;
+  }
+
+  .hero h1 {
+    font-size: 4.5rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .poems-button {
+    margin-top: 2rem;
+  }
+
+  .scroll-indicator {
+    bottom: 1.2rem;
+
+    font-size: 0.6rem;
+  }
+
+  .shape-one {
+    width: 280px;
+    height: 280px;
+
+    top: -120px;
+    left: -120px;
+  }
+
+  .shape-two {
+    width: 250px;
+    height: 250px;
+
+    right: -120px;
+    bottom: -120px;
+  }
+}
+/* ==============================
+   SITE
+============================== */
+
+.site {
+  width: 100%;
+}
+
+
+/* ==============================
+   NAVBAR
+============================== */
+
+.navbar {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  z-index: 10;
+
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 1.5rem 4rem;
+
+  background: rgba(238, 224, 201, 0.75);
+
+  backdrop-filter: blur(10px);
+
+  border-bottom: 1px solid rgba(128, 99, 77, 0.12);
+}
+
+
+.logo {
+  color: #3b291e;
+
+  text-decoration: none;
+
+  font-size: 1.4rem;
+
+  font-style: italic;
+}
+
+
+.nav-links {
+  display: flex;
+
+  gap: 2.5rem;
+}
+
+
+.nav-links a {
+  position: relative;
+
+  color: #604838;
+
+  text-decoration: none;
+
+  font-size: 0.9rem;
+
+  transition:
+    color 0.3s ease;
+}
+
+
+.nav-links a::after {
+  content: '';
+
+  position: absolute;
+
+  left: 0;
+  bottom: -5px;
+
+  width: 0;
+  height: 1px;
+
+  background: #604838;
+
+  transition:
+    width 0.3s ease;
+}
+
+
+.nav-links a:hover {
+  color: #352419;
+}
+
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+
+/* ==============================
+   POEMA EM DESTAQUE
+============================== */
+
+.featured-poem {
+  min-height: 80vh;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 8rem 2rem;
+
+  background: #e7d5b9;
+
+  color: #3d2b20;
+}
+
+
+.section-ornament {
+  margin-bottom: 1rem;
+
+  color: #927257;
+
+  font-size: 1rem;
+}
+
+
+.section-label {
+  margin: 0 0 1.5rem;
+
+  font-size: 0.75rem;
+
+  letter-spacing: 0.25em;
+
+  text-transform: uppercase;
+
+  color: #80634d;
+}
+
+
+.featured-poem h2,
+.about h2 {
+  margin: 0;
+
+  font-family:
+    Georgia,
+    'Times New Roman',
+    serif;
+
+  font-size: clamp(2.5rem, 6vw, 5rem);
+
+  font-weight: 400;
+
+  font-style: italic;
+}
+
+
+.poem-preview {
+  max-width: 600px;
+
+  margin: 2rem auto;
+
+  font-size: 1.1rem;
+
+  line-height: 1.9;
+
+  color: #705544;
+}
+
+
+.read-button {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 1rem;
+
+  padding: 0.9rem 1.5rem;
+
+  border: 1px solid #80634d;
+
+  color: #4a3427;
+
+  text-decoration: none;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+.read-button:hover {
+  background: #59402f;
+
+  color: #f5ead8;
+
+  transform: translateY(-3px);
+}
+
+
+/* ==============================
+   SOBRE
+============================== */
+
+.about {
+  min-height: 70vh;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 8rem 2rem;
+
+  background: #f5ead8;
+}
+
+
+.about > p:last-child {
+  max-width: 600px;
+
+  margin-top: 2rem;
+
+  font-size: 1.1rem;
+
+  line-height: 2;
+
+  color: #705544;
+}
+
+
+/* ==============================
+   RESPONSIVO
+============================== */
+
+@media (max-width: 700px) {
+
+  .navbar {
+    padding: 1.2rem 1.5rem;
+  }
+
+  .nav-links {
+    gap: 1rem;
+  }
+
+  .nav-links a {
+    font-size: 0.8rem;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+  }
+
+}
+/* ==============================
+   BIBLIOTECA DE POEMAS
+============================== */
+
+.poems-page {
+  min-height: 100vh;
+
+  padding: 9rem 2rem;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  text-align: center;
+
+  background: #efe1cb;
+
+  color: #3d2b20;
+}
+
+
+.poems-page h2 {
+  margin: 0;
+
+  font-family:
+    Georgia,
+    'Times New Roman',
+    serif;
+
+  font-size: clamp(2.8rem, 6vw, 5rem);
+
+  font-weight: 400;
+
+  font-style: italic;
+}
+
+
+.poems-introduction {
+  max-width: 550px;
+
+  margin: 1.5rem auto 4rem;
+
+  font-size: 1.05rem;
+
+  line-height: 1.8;
+
+  color: #705544;
+}
+
+
+/* ==============================
+   GRELHA
+============================== */
+
+.poems-grid {
+  width: 100%;
+
+  max-width: 1100px;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 2rem;
+
+  text-align: left;
+}
+
+
+/* ==============================
+   CARTÃO
+============================== */
+
+.poem-card {
+  position: relative;
+
+  padding: 2.5rem;
+
+  background: #f5ead8;
+
+  border: 1px solid rgba(128, 99, 77, 0.2);
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease,
+    background 0.4s ease;
+}
+
+
+.poem-card:hover {
+  transform: translateY(-8px);
+
+  background: #f8efdf;
+
+  box-shadow:
+    0 20px 40px rgba(70, 45, 30, 0.12);
+}
+
+
+/* ==============================
+   CATEGORIA
+============================== */
+
+.poem-category {
+  display: block;
+
+  margin-bottom: 1.2rem;
+
+  font-size: 0.7rem;
+
+  letter-spacing: 0.2em;
+
+  text-transform: uppercase;
+
+  color: #927257;
+}
+
+
+/* ==============================
+   TÍTULO DO POEMA
+============================== */
+
+.poem-card h3 {
+  margin: 0;
+
+  font-family:
+    Georgia,
+    'Times New Roman',
+    serif;
+
+  font-size: 2rem;
+
+  font-weight: 400;
+
+  font-style: italic;
+
+  color: #3b291e;
+}
+
+
+/* ==============================
+   DATA
+============================== */
+
+.poem-date {
+  margin: 0.7rem 0 1.5rem;
+
+  font-size: 0.75rem;
+
+  color: #927257;
+}
+
+
+/* ==============================
+   EXCERTO
+============================== */
+
+.poem-excerpt {
+  margin: 0 0 2rem;
+
+  line-height: 1.8;
+
+  color: #705544;
+}
+
+
+/* ==============================
+   LINK
+============================== */
+
+.poem-link {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 0.8rem;
+
+  color: #4a3427;
+
+  text-decoration: none;
+
+  font-size: 0.9rem;
+
+  transition:
+    gap 0.3s ease,
+    color 0.3s ease;
+}
+
+
+.poem-link:hover {
+  gap: 1.2rem;
+
+  color: #2f2018;
+}
+
+
+/* ==============================
+   RESPONSIVO
+============================== */
+
+@media (max-width: 750px) {
+
+  .poems-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .poem-card {
+    padding: 2rem;
+  }
+
+}
+/* ==============================
+   PÁGINA INDIVIDUAL DO POEMA
+============================== */
+
+.poem-page {
+  min-height: 100vh;
+
+  padding: 9rem 2rem 6rem;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  text-align: center;
+
+  background:
+    radial-gradient(
+      circle at center,
+      #f5ead8 0%,
+      #ead8bd 100%
+    );
+
+  color: #3d2b20;
+}
+
+
+.poem-page-decoration {
+  margin-bottom: 1.5rem;
+
+  color: #927257;
+
+  font-size: 1.2rem;
+}
+
+
+.poem-page h1 {
+  margin: 0;
+
+  max-width: 900px;
+
+  font-family:
+    Georgia,
+    'Times New Roman',
+    serif;
+
+  font-size: clamp(3rem, 8vw, 6rem);
+
+  font-weight: 400;
+
+  font-style: italic;
+}
+
+
+.poem-page-date {
+  margin-top: 1rem;
+
+  font-size: 0.8rem;
+
+  color: #927257;
+}
+
+
+.poem-divider {
+  display: flex;
+
+  align-items: center;
+
+  gap: 1rem;
+
+  width: min(350px, 70vw);
+
+  margin: 2rem 0 4rem;
+}
+
+
+.poem-divider span:not(:nth-child(2)) {
+  flex: 1;
+
+  height: 1px;
+
+  background: #a88c6d;
+}
+
+
+.poem-divider span:nth-child(2) {
+  font-size: 0.7rem;
+
+  color: #927257;
+}
+
+
+/* ==============================
+   TEXTO DO POEMA
+============================== */
+
+.poem-content {
+  width: 100%;
+
+  max-width: 650px;
+
+  padding: 3rem;
+
+  background:
+    rgba(255, 248, 237, 0.5);
+
+  border:
+    1px solid rgba(128, 99, 77, 0.15);
+
+  box-shadow:
+    0 20px 50px rgba(70, 45, 30, 0.08);
+
+  text-align: center;
+
+  animation:
+    poemAppear 1s ease-out;
+}
+
+
+.poem-content p {
+  margin: 0 0 1.5rem;
+
+  font-family:
+    Georgia,
+    'Times New Roman',
+    serif;
+
+  font-size: 1.15rem;
+
+  line-height: 2;
+
+  color: #4d372a;
+}
+
+
+.poem-content p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* ==============================
+   VOLTAR
+============================== */
+
+.back-link {
+  margin-top: 3rem;
+
+  color: #604838;
+
+  text-decoration: none;
+
+  font-size: 0.9rem;
+
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
+}
+
+
+.back-link:hover {
+  color: #302018;
+
+  transform:
+    translateX(-5px);
+}
+
+
+/* ==============================
+   POEMA NÃO ENCONTRADO
+============================== */
+
+.poem-not-found {
+  min-height: 100vh;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 2rem;
+
+  background: #eee0c9;
+
+  text-align: center;
+}
+
+
+.poem-not-found h1 {
+  font-weight: 400;
+}
+
+
+.poem-not-found a {
+  color: #604838;
+}
+
+
+/* ==============================
+   ANIMAÇÃO
+============================== */
+
+@keyframes poemAppear {
+
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
+
+}
+
+
+/* ==============================
+   MOBILE
+============================== */
+
+@media (max-width: 600px) {
+
+  .poem-content {
+    padding: 2rem 1.5rem;
+  }
+
+  .poem-content p {
+    font-size: 1rem;
+  }
+
+}
+/* =========================================
+   BIBLIOTECA DE POEMAS
+========================================= */
+
+.poems-library {
+  min-height: 100vh;
+
+  background:
+    radial-gradient(
+      circle at 50% 15%,
+      #f7eddd 0%,
+      #ead8bd 45%,
+      #dfc9a8 100%
+    );
+
+  color: #3d2b20;
+}
+
+
+/* =========================================
+   CABEÇALHO
+========================================= */
+
+.poems-header {
+  min-height: 65vh;
+
+  padding:
+    10rem 2rem
+    5rem;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+}
+
+
+.library-symbol {
+  margin-bottom: 1.5rem;
+
+  font-size: 1.2rem;
+
+  color: #927257;
+
+  animation:
+    floatingSymbol 4s ease-in-out infinite;
+}
+
+
+.poems-header h1 {
+  margin: 0;
+
+  font-family:
+    Georgia,
+    'Times New Roman',
+    serif;
+
+  font-size:
+    clamp(3.5rem, 8vw, 7rem);
+
+  font-weight: 400;
+
+  font-style: italic;
+
+  letter-spacing: -0.03em;
+
+  animation:
+    titleAppear 1s ease-out;
+}
+
+
+.poems-description {
+  max-width: 620px;
+
+  margin-top: 2rem;
+
+  font-size: 1.05rem;
+
+  line-height: 2;
+
+  color: #705544;
+
+  animation:
+    textAppear 1.2s ease-out;
+}
+
+
+/* =========================================
+   CONTROLOS
+========================================= */
+
+.poems-controls {
+  width: min(1100px, 90%);
+
+  margin:
+    0 auto
+    4rem;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 2rem;
+}
+
+
+/* PESQUISA */
+
+.search-box {
+  width: min(500px, 100%);
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 1rem;
+
+  padding: 0.9rem 1.2rem;
+
+  background:
+    rgba(255, 248, 237, 0.6);
+
+  border:
+    1px solid rgba(128, 99, 77, 0.25);
+
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+.search-box:focus-within {
+  border-color: #927257;
+
+  box-shadow:
+    0 10px 30px
+    rgba(70, 45, 30, 0.08);
+}
+
+
+.search-box span {
+  font-size: 1.2rem;
+
+  color: #80634d;
+}
+
+
+.search-box input {
+  width: 100%;
+
+  border: none;
+
+  outline: none;
+
+  background: transparent;
+
+  color: #3d2b20;
+
+  font-family: inherit;
+
+  font-size: 0.95rem;
+}
+
+
+.search-box input::placeholder {
+  color: #9a806b;
+}
+
+
+/* =========================================
+   CATEGORIAS
+========================================= */
+
+.category-filter {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  justify-content: center;
+
+  gap: 0.6rem;
+}
+
+
+.category-button {
+  padding:
+    0.55rem
+    1.1rem;
+
+  border:
+    1px solid rgba(128, 99, 77, 0.25);
+
+  background: transparent;
+
+  color: #705544;
+
+  font-family: inherit;
+
+  font-size: 0.75rem;
+
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+.category-button:hover {
+  transform: translateY(-2px);
+
+  background: #ead8bd;
+}
+
+
+.category-button.active {
+  background: #59402f;
+
+  color: #f7eddd;
+
+  border-color: #59402f;
+}
+
+
+/* =========================================
+   RESULTADOS
+========================================= */
+
+.poems-results {
+  width: min(1100px, 90%);
+
+  margin: 0 auto;
+
+  padding-bottom: 8rem;
+}
+
+
+.poems-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 2rem;
+}
+
+
+.poem-card-wrapper {
+  animation:
+    cardAppear 0.7s ease both;
+}
+
+
+/* =========================================
+   CARTÃO
+========================================= */
+
+.poem-card {
+  position: relative;
+
+  height: 100%;
+
+  padding: 2.5rem;
+
+  background:
+    rgba(248, 239, 223, 0.75);
+
+  border:
+    1px solid rgba(128, 99, 77, 0.2);
+
+  box-shadow:
+    0 10px 30px
+    rgba(70, 45, 30, 0.05);
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease,
+    background 0.4s ease;
+}
+
+
+.poem-card:hover {
+  transform:
+    translateY(-8px);
+
+  background:
+    rgba(255, 248, 237, 0.9);
+
+  box-shadow:
+    0 25px 50px
+    rgba(70, 45, 30, 0.12);
+}
+
+
+/* topo do cartão */
+
+.card-top {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+
+.poem-category {
+  font-size: 0.65rem;
+
+  letter-spacing: 0.2em;
+
+  text-transform: uppercase;
+
+  color: #927257;
+}
+
+
+.card-symbol {
+  color: #a88c6d;
+
+  font-size: 0.8rem;
+
+  transition:
+    transform 0.4s ease;
+}
+
+
+.poem-card:hover .card-symbol {
+  transform:
+    rotate(90deg);
+}
+
+
+/* título */
+
+.poem-card h2 {
+  margin:
+    1.5rem
+    0
+    0.5rem;
+
+  font-family:
+    Georgia,
+    'Times New Roman',
+    serif;
+
+  font-size: 2.2rem;
+
+  font-weight: 400;
+
+  font-style: italic;
+
+  color: #3b291e;
+}
+
+
+/* data */
+
+.poem-date {
+  margin: 0;
+
+  font-size: 0.72rem;
+
+  color: #927257;
+}
+
+
+/* linha */
+
+.card-line {
+  width: 50px;
+
+  height: 1px;
+
+  margin:
+    1.5rem 0;
+
+  background: #a88c6d;
+
+  transition:
+    width 0.4s ease;
+}
+
+
+.poem-card:hover .card-line {
+  width: 100px;
+}
+
+
+/* excerto */
+
+.poem-excerpt {
+  max-width: 500px;
+
+  margin: 0 0 2rem;
+
+  font-family:
+    Georgia,
+    'Times New Roman',
+    serif;
+
+  font-size: 1rem;
+
+  line-height: 1.9;
+
+  color: #705544;
+}
+
+
+/* link */
+
+.poem-link {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 0.8rem;
+
+  color: #4a3427;
+
+  text-decoration: none;
+
+  font-size: 0.85rem;
+
+  transition:
+    gap 0.3s ease,
+    color 0.3s ease;
+}
+
+
+.poem-link:hover {
+  gap: 1.2rem;
+
+  color: #241811;
+}
+
+
+.poem-arrow {
+  font-size: 1.1rem;
+}
+
+
+/* =========================================
+   SEM RESULTADOS
+========================================= */
+
+.no-poems {
+  min-height: 300px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+}
+
+
+.no-poems > span {
+  margin-bottom: 1rem;
+
+  color: #927257;
+}
+
+
+.no-poems h2 {
+  margin: 0;
+
+  font-family:
+    Georgia,
+    'Times New Roman',
+    serif;
+
+  font-size: 2rem;
+
+  font-weight: 400;
+
+  font-style: italic;
+}
+
+
+.no-poems p {
+  color: #80634d;
+}
+
+
+/* =========================================
+   RODAPÉ
+========================================= */
+
+.poems-footer {
+  padding: 4rem 2rem;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  text-align: center;
+
+  border-top:
+    1px solid
+    rgba(128, 99, 77, 0.15);
+
+  color: #80634d;
+}
+
+
+.poems-footer span {
+  margin-bottom: 1rem;
+
+  color: #927257;
+}
+
+
+.poems-footer p {
+  margin: 0;
+
+  font-family:
+    Georgia,
+    'Times New Roman',
+    serif;
+
+  font-size: 1.4rem;
+
+  font-style: italic;
+}
+
+
+.poems-footer small {
+  margin-top: 0.5rem;
+
+  font-size: 0.7rem;
+
+  letter-spacing: 0.1em;
+}
+
+
+/* =========================================
+   ANIMAÇÕES
+========================================= */
+
+@keyframes titleAppear {
+
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
+
+}
+
+
+@keyframes textAppear {
+
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
+
+}
+
+
+@keyframes cardAppear {
+
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
+
+}
+
+
+@keyframes floatingSymbol {
+
+  0%,
+  100% {
+    transform:
+      translateY(0);
+  }
+
+  50% {
+    transform:
+      translateY(-6px);
+  }
+
+}
+
+
+/* =========================================
+   RESPONSIVO
+========================================= */
+
+@media (max-width: 750px) {
+
+  .poems-header {
+    padding:
+      8rem 1.5rem
+      4rem;
+  }
+
+
+  .poems-description {
+    font-size: 0.95rem;
+  }
+
+
+  .poems-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .poem-card {
+    padding: 2rem;
+  }
+
+
+  .poem-card h2 {
+    font-size: 1.9rem;
+  }
+
+}
+
+
+@media (max-width: 500px) {
+
+  .category-filter {
+    gap: 0.4rem;
+  }
+
+
+  .category-button {
+    padding:
+      0.5rem 0.8rem;
+
+    font-size: 0.7rem;
+  }
+
+}
+/* ==========================================
+   CARTÕES DE POEMAS
+   ========================================== */
+
+.poems-grid {
+  width: min(1100px, 90%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+
+/* Cada cartão */
+
+.poem-card-wrapper {
+  animation: poemAppear 0.8s ease forwards;
+  opacity: 0;
+}
+
+
+/* Cartão */
+
+.poem-card {
+  position: relative;
+
+  padding: 42px 36px;
+
+  background: rgba(239, 227, 207, 0.72);
+
+  border: 1px solid rgba(91, 62, 43, 0.18);
+
+  border-radius: 4px;
+
+  text-align: center;
+
+  box-shadow:
+    0 12px 35px rgba(62, 42, 28, 0.08);
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease,
+    background 0.4s ease;
+}
+
+
+/* Efeito ao passar o rato */
+
+.poem-card:hover {
+
+  transform: translateY(-8px);
+
+  background: rgba(244, 234, 218, 0.95);
+
+  box-shadow:
+    0 20px 45px rgba(62, 42, 28, 0.14);
+}
+
+
+/* Pequeno detalhe no topo */
+
+.poem-card::before {
+
+  content: "✦";
+
+  position: absolute;
+
+  top: 15px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  font-size: 12px;
+
+  color: #76563e;
+
+  opacity: 0.7;
+}
+
+
+/* Categoria */
+
+.poem-card-category {
+
+  display: block;
+
+  margin-bottom: 14px;
+
+  font-size: 11px;
+
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
+
+  color: #80624a;
+}
+
+
+/* Título */
+
+.poem-card-title {
+
+  margin: 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 30px;
+
+  font-weight: 400;
+
+  line-height: 1.2;
+
+  color: #493326;
+}
+
+
+/* Excerto */
+
+.poem-card-excerpt {
+
+  max-width: 430px;
+
+  margin: 20px auto;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 16px;
+
+  line-height: 1.8;
+
+  color: #6d5543;
+
+  white-space: pre-line;
+}
+
+
+/* Separador */
+
+.poem-card-divider {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  margin: 25px auto 18px;
+}
+
+
+.poem-card-divider span:not(:nth-child(2)) {
+
+  width: 35px;
+
+  height: 1px;
+
+  background: rgba(91, 62, 43, 0.3);
+}
+
+
+.poem-card-divider span:nth-child(2) {
+
+  font-size: 10px;
+
+  color: #76563e;
+}
+
+
+/* Data */
+
+.poem-card-date {
+
+  margin: 0 0 24px;
+
+  font-size: 12px;
+
+  letter-spacing: 1px;
+
+  color: #8a725f;
+}
+
+
+/* Botão */
+
+.poem-card-button {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 11px 20px;
+
+  border: 1px solid rgba(91, 62, 43, 0.3);
+
+  color: #5a3d2b;
+
+  text-decoration: none;
+
+  font-size: 13px;
+
+  letter-spacing: 1px;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    gap 0.3s ease;
+}
+
+
+.poem-card-button:hover {
+
+  background: #5a3d2b;
+
+  color: #f3e8d7;
+
+  gap: 18px;
+}
+
+
+.poem-card-button span {
+
+  transition:
+    transform 0.3s ease;
+}
+
+
+.poem-card-button:hover span {
+
+  transform: translateX(3px);
+}
+
+
+/* ==========================================
+   ANIMAÇÃO
+   ========================================== */
+
+@keyframes poemAppear {
+
+  from {
+
+    opacity: 0;
+
+    transform: translateY(25px);
+
+  }
+
+  to {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+  }
+
+}
+
+
+/* ==========================================
+   RESPONSIVO
+   ========================================== */
+
+@media (max-width: 750px) {
+
+  .poems-grid {
+
+    grid-template-columns: 1fr;
+
+    width: 88%;
+
+  }
+
+
+  .poem-card {
+
+    padding: 36px 25px;
+
+  }
+
+
+  .poem-card-title {
+
+    font-size: 26px;
+
+  }
+
+}
+/* ==========================================
+   PÁGINA INDIVIDUAL DO POEMA
+   ========================================== */
+
+.poem-page {
+  min-height: 100vh;
+  background: #eee2d0;
+  color: #4d3627;
+}
+
+
+/* Conteúdo principal */
+
+.single-poem {
+  width: min(760px, 88%);
+  margin: 0 auto;
+  padding: 120px 0 80px;
+  text-align: center;
+}
+
+
+/* Voltar */
+
+.back-link {
+  display: inline-block;
+
+  margin-bottom: 70px;
+
+  color: #76563e;
+
+  text-decoration: none;
+
+  font-size: 13px;
+
+  letter-spacing: 1px;
+
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
+}
+
+
+.back-link:hover {
+  color: #493326;
+
+  transform: translateX(-5px);
+}
+
+
+/* Cabeçalho */
+
+.single-poem-header {
+  animation: poemHeaderAppear 1s ease forwards;
+}
+
+
+.poem-category {
+  display: block;
+
+  margin-bottom: 25px;
+
+  font-size: 11px;
+
+  letter-spacing: 4px;
+
+  text-transform: uppercase;
+
+  color: #80624a;
+}
+
+
+.single-poem-symbol {
+  display: block;
+
+  margin-bottom: 20px;
+
+  font-size: 18px;
+
+  color: #76563e;
+
+  animation: symbolFloat 4s ease-in-out infinite;
+}
+
+
+/* Título */
+
+.single-poem-header h1 {
+
+  margin: 0;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: clamp(42px, 7vw, 72px);
+
+  font-weight: 400;
+
+  line-height: 1.1;
+
+  color: #493326;
+}
+
+
+/* Data */
+
+.poem-date {
+
+  margin-top: 25px;
+
+  font-size: 12px;
+
+  letter-spacing: 1px;
+
+  color: #8a725f;
+}
+
+
+/* Linha */
+
+.single-poem-line {
+
+  width: 120px;
+
+  height: 1px;
+
+  margin: 55px auto;
+
+  background: rgba(91, 62, 43, 0.25);
+
+  position: relative;
+}
+
+
+.single-poem-line::after {
+
+  content: "✦";
+
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  transform:
+    translate(-50%, -50%);
+
+  padding: 0 12px;
+
+  background: #eee2d0;
+
+  font-size: 10px;
+
+  color: #76563e;
+}
+
+
+/* ==========================================
+   CONTEÚDO DO POEMA
+   ========================================== */
+
+.poem-content {
+
+  max-width: 620px;
+
+  margin: 0 auto;
+
+  padding: 10px 0 70px;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 20px;
+
+  line-height: 2;
+
+  color: #5a4333;
+
+  text-align: center;
+
+  animation:
+    poemContentAppear 1.2s ease 0.2s
+    forwards;
+
+  opacity: 0;
+}
+
+
+.poem-content p {
+
+  margin: 0;
+
+  min-height: 1.5em;
+
+}
+
+
+/* ==========================================
+   RODAPÉ DO POEMA
+   ========================================== */
+
+.single-poem-footer {
+
+  padding-top: 45px;
+
+  border-top:
+    1px solid rgba(91, 62, 43, 0.15);
+}
+
+
+.single-poem-footer span {
+
+  display: block;
+
+  margin-bottom: 12px;
+
+  font-size: 13px;
+
+  color: #76563e;
+}
+
+
+.single-poem-footer p {
+
+  margin: 0;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 20px;
+
+  color: #493326;
+}
+
+
+.single-poem-footer small {
+
+  display: block;
+
+  margin-top: 8px;
+
+  font-size: 11px;
+
+  letter-spacing: 1px;
+
+  color: #8a725f;
+}
+
+
+/* ==========================================
+   LOADING
+   ========================================== */
+
+.poem-loading {
+
+  min-height: 100vh;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  color: #5a4333;
+}
+
+
+.poem-loading span {
+
+  font-size: 24px;
+
+  margin-bottom: 20px;
+
+  animation:
+    symbolFloat 3s ease-in-out infinite;
+}
+
+
+.poem-loading h2 {
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-weight: 400;
+}
+
+
+/* ==========================================
+   POEMA NÃO ENCONTRADO
+   ========================================== */
+
+.poem-not-found {
+
+  min-height: 100vh;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 30px;
+}
+
+
+.poem-not-found span {
+
+  margin-bottom: 20px;
+
+  font-size: 24px;
+
+  color: #76563e;
+}
+
+
+.poem-not-found h1 {
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 42px;
+
+  font-weight: 400;
+
+  color: #493326;
+}
+
+
+.poem-not-found p {
+
+  color: #765f4d;
+
+  margin-bottom: 30px;
+}
+
+
+.poem-not-found a {
+
+  color: #5a3d2b;
+
+  text-decoration: none;
+
+  border-bottom:
+    1px solid rgba(90, 61, 43, 0.4);
+
+  padding-bottom: 4px;
+}
+
+
+/* ==========================================
+   ANIMAÇÕES
+   ========================================== */
+
+@keyframes poemHeaderAppear {
+
+  from {
+
+    opacity: 0;
+
+    transform: translateY(25px);
+
+  }
+
+  to {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+  }
+
+}
+
+
+@keyframes poemContentAppear {
+
+  from {
+
+    opacity: 0;
+
+    transform: translateY(20px);
+
+  }
+
+  to {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+  }
+
+}
+
+
+@keyframes symbolFloat {
+
+  0%,
+  100% {
+
+    transform: translateY(0);
+
+  }
+
+  50% {
+
+    transform: translateY(-5px);
+
+  }
+
+}
+
+
+/* ==========================================
+   TELEMÓVEL
+   ========================================== */
+
+@media (max-width: 600px) {
+
+  .single-poem {
+
+    padding-top: 90px;
+
+  }
+
+
+  .back-link {
+
+    margin-bottom: 50px;
+
+  }
+
+
+  .single-poem-header h1 {
+
+    font-size: 42px;
+
+  }
+
+
+  .poem-content {
+
+    font-size: 18px;
+
+    line-height: 1.9;
+
+  }
+
+}
+/* ==========================================
+   PAINEL DE ADMINISTRAÇÃO
+   ========================================== */
+
+.admin-page {
+  min-height: 100vh;
+  background: #eee2d0;
+  color: #4d3627;
+}
+
+
+/* Conteúdo */
+
+.admin-container {
+  width: min(850px, 90%);
+  margin: 0 auto;
+  padding: 110px 0 80px;
+}
+
+
+/* Cabeçalho */
+
+.admin-header {
+  text-align: center;
+  margin-bottom: 55px;
+}
+
+
+.admin-header > span {
+  display: block;
+  margin-bottom: 18px;
+  color: #76563e;
+  font-size: 20px;
+}
+
+
+.admin-header h1 {
+  margin: 0 0 18px;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: clamp(40px, 6vw, 58px);
+
+  font-weight: 400;
+
+  color: #493326;
+}
+
+
+.admin-header p:not(.section-label) {
+  max-width: 500px;
+  margin: 0 auto;
+
+  line-height: 1.8;
+
+  color: #765f4d;
+}
+
+
+/* ==========================================
+   FORMULÁRIO
+   ========================================== */
+
+.admin-form {
+  width: 100%;
+}
+
+
+.form-group {
+  margin-bottom: 28px;
+}
+
+
+.form-group label {
+  display: block;
+
+  margin-bottom: 9px;
+
+  font-size: 12px;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+
+  color: #76563e;
+}
+
+
+.form-group input,
+.form-group textarea {
+
+  box-sizing: border-box;
+
+  width: 100%;
+
+  padding: 15px 17px;
+
+  border: 1px solid rgba(91, 62, 43, 0.2);
+
+  border-radius: 2px;
+
+  outline: none;
+
+  background: rgba(248, 240, 228, 0.75);
+
+  color: #4d3627;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 16px;
+
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+}
+
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #a18b77;
+}
+
+
+.form-group input:focus,
+.form-group textarea:focus {
+
+  border-color: #76563e;
+
+  background: #f8f0e4;
+
+  box-shadow:
+    0 5px 20px rgba(62, 42, 28, 0.06);
+}
+
+
+.form-group textarea {
+  resize: vertical;
+
+  line-height: 1.8;
+}
+
+
+/* Área do poema */
+
+.poem-textarea {
+
+  min-height: 300px;
+
+  font-size: 18px !important;
+
+  line-height: 2 !important;
+
+  text-align: center;
+}
+
+
+/* ==========================================
+   OPÇÕES
+   ========================================== */
+
+.admin-options {
+
+  display: flex;
+
+  justify-content: center;
+
+  gap: 35px;
+
+  margin: 35px 0;
+
+  flex-wrap: wrap;
+}
+
+
+.checkbox-option {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  cursor: pointer;
+
+  font-size: 13px;
+
+  color: #6d5543;
+}
+
+
+.checkbox-option input {
+
+  width: 16px;
+
+  height: 16px;
+
+  accent-color: #76563e;
+
+  cursor: pointer;
+}
+
+
+/* ==========================================
+   BOTÃO
+   ========================================== */
+
+.admin-submit {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 14px;
+
+  width: 100%;
+
+  padding: 16px 25px;
+
+  border: 1px solid #5a3d2b;
+
+  background: #5a3d2b;
+
+  color: #f5eadb;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 15px;
+
+  letter-spacing: 1px;
+
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+.admin-submit:hover {
+
+  background: #493326;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 25px rgba(62, 42, 28, 0.12);
+}
+
+
+.admin-submit:disabled {
+
+  opacity: 0.6;
+
+  cursor: wait;
+
+  transform: none;
+
+  box-shadow: none;
+}
+
+
+.admin-submit span {
+
+  transition:
+    transform 0.3s ease;
+}
+
+
+.admin-submit:hover span {
+
+  transform: translateX(5px);
+}
+
+
+/* ==========================================
+   MENSAGENS
+   ========================================== */
+
+.admin-message {
+
+  margin-bottom: 30px;
+
+  padding: 15px 20px;
+
+  text-align: center;
+
+  font-size: 14px;
+
+  border: 1px solid rgba(91, 62, 43, 0.15);
+}
+
+
+.admin-message.success {
+
+  background: rgba(213, 202, 183, 0.6);
+
+  color: #536044;
+}
+
+
+.admin-message.error {
+
+  background: rgba(225, 204, 190, 0.65);
+
+  color: #794c3d;
+}
+
+
+/* ==========================================
+   TELEMÓVEL
+   ========================================== */
+
+@media (max-width: 600px) {
+
+  .admin-container {
+
+    width: 88%;
+
+    padding-top: 85px;
+  }
+
+
+  .admin-options {
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 18px;
+  }
+
+
+  .poem-textarea {
+
+    min-height: 250px;
+
+  }
+
+}
